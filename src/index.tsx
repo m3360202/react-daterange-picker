@@ -15,6 +15,8 @@ import { DateRange, NavigationAction, DefinedRange } from "./types";
 import Menu from "./components/Menu";
 import { defaultRanges } from "./defaults";
 import { parseOptionalDate } from "./utils";
+import theme from './theme';
+import { ThemeProvider } from '@mui/material/styles';
 
 type Marker = symbol;
 
@@ -151,19 +153,21 @@ const DateRangePickerImpl: React.FunctionComponent<DateRangePickerProps> = props
 	};
 
 	return open ? (
-		<Menu
-			dateRange={dateRange}
-			minDate={minDateValid}
-			maxDate={maxDateValid}
-			ranges={definedRanges}
-			firstMonth={firstMonth}
-			secondMonth={secondMonth}
-			setFirstMonth={setFirstMonthValidated}
-			setSecondMonth={setSecondMonthValidated}
-			setDateRange={setDateRangeValidated}
-			helpers={helpers}
-			handlers={handlers}
-		/>
+		<ThemeProvider theme={theme}>
+			<Menu
+				dateRange={dateRange}
+				minDate={minDateValid}
+				maxDate={maxDateValid}
+				ranges={definedRanges}
+				firstMonth={firstMonth}
+				secondMonth={secondMonth}
+				setFirstMonth={setFirstMonthValidated}
+				setSecondMonth={setSecondMonthValidated}
+				setDateRange={setDateRangeValidated}
+				helpers={helpers}
+				handlers={handlers}
+			/>
+		</ThemeProvider> 
 	) : null;
 };
 
