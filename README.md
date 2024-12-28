@@ -8,15 +8,15 @@ A react date range picker using material-ui components.
 ## Usage
 
 ```bash
-npm install @stey/react-daterange-picker --save
+npm install stey-react-daterange-picker --save
 # or with yarn
-yarn add @stey/react-daterange-picker
+yarn add stey-react-daterange-picker
 ```
 
 ## Basic Example
 ```tsx
 import React from "react";
-import { DateRangePicker, DateRange } from "@stey/react-daterange-picker";
+import { DateRangePicker, DateRange } from "stey-react-daterange-picker";
 
 type Props = {}
 type State = {
@@ -46,7 +46,7 @@ export default App;
 ## Basic example using hooks
 ```tsx
 import React from "react";
-import { DateRangePicker, DateRange } from "@stey/react-daterange-picker";
+import { DateRangePicker, DateRange } from "stey-react-daterange-picker";
 
 type Props = {}
 
