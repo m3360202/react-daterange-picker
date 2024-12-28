@@ -3,14 +3,14 @@ import {
 	Paper,
 	Grid,
 	createStyles,
-	WithStyles,
-	Theme,
-	withStyles
-} from "@material-ui/core";
+	Theme
+} from "@mui/material";
 import { differenceInCalendarMonths } from "date-fns";
 import Month from "./Month";
 import { DateRange, DefinedRange, Setter, NavigationAction } from "../types";
 import { MARKERS } from "..";
+import { withStyles } from '@mui/styles';
+import { WithStyles } from '@material-ui/core';
 
 const styles = (theme: Theme) =>
 	createStyles({
@@ -84,7 +84,7 @@ const Menu: React.FunctionComponent<MenuProps> = props => {
 						</Grid>
 					</Grid> */}
 					{/* <Divider /> */}
-					<Grid container direction="row" justify="center" wrap="nowrap">
+					<Grid container sx={{ direction: 'row', justifyItems: 'center', wrap: 'wrap' }}>
 						<Month
 							{...commonProps}
 							value={firstMonth}

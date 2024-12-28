@@ -3,11 +3,11 @@ import {
 	IconButton,
 	Typography,
 	createStyles,
-	Theme,
-	WithStyles,
-	withStyles
-} from "@material-ui/core";
+	Theme
+} from "@mui/material";
 import { combine } from "../utils";
+import { withStyles } from '@mui/styles';
+import { WithStyles } from '@material-ui/core';
 
 interface DayProps extends WithStyles<typeof styles> {
 	filled?: boolean;
